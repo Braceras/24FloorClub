@@ -4,7 +4,7 @@ const Main = (props) => {
 
 
   return (
-    <h1>{props.nombre}</h1>
+    <h1 className='nameTittle'>24 Floor Club</h1>
   )
 }
 
