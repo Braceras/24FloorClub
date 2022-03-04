@@ -4,8 +4,8 @@ const Main = (props) => {
 
 
   return (
-    <h1 className='nameTittle'>24 Floor Club</h1>
+    <h1 className='nameTittle'>{props.nombre}</h1>
   )
 }
 
-export default Main
+export default Main 

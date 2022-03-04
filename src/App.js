@@ -10,7 +10,7 @@ import Footer from './Components/Footer'
 const App = () => {
   return ( <>
       <Header/>
-      <Main/>
+      <Main nombre='24 Floor Club' />
       <Footer/>
 
   </>
