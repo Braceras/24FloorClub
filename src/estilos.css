@@ -11,30 +11,46 @@ body{
 .header__container{
     
     width: 100%;
-    height: 6%;
+    height: 4rem;
     box-shadow: 0 0.1rem 0.2rem rgb(219, 219, 219);
     
 }
 
 .header__logo{
-    width: 1rem;
-    height: 1rem;
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+    margin: -2rem 0rem 0rem 0.5rem;
+    padding: 1rem;
     
 }
 
 .material-icons{
-    margin-left: 10%;
+    margin-left: 40%;
     border: solid grey;
 }
 
+.H1__Container{
+    height: 25rem;
+    background-color: aliceblue;
+}
+
+.H1-img{
+    width: 30%;
+    height: 35%;
+    margin: 6rem 0rem 0rem 35%;
+    
+    
+}
+
 nav{ 
-    margin: 1rem 0rem 0rem 10rem;
+    margin: 2rem 0rem 0rem 10rem;
     
 }
 nav a{
     margin: 0rem 0rem 0rem 4rem;
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: #444;
 }
 
@@ -46,4 +62,5 @@ nav a{
 }
 .btn-contador{
     margin: 1rem;
+    
 }
