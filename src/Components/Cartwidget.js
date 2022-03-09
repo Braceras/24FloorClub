@@ -2,7 +2,7 @@ import React from 'react'
 
 const Cartwidget = () => {
   return (
-    <span class="material-icons">
+    <span className='material-icons'>
                 invert_colors
             </span>
   )

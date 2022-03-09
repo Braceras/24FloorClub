@@ -38,6 +38,12 @@ nav a{
     color: #444;
 }
 
-.nameTittle{
-    font-family: 'Pacifico', cursive;
+.contador{
+    margin: 3rem 0rem 0rem 15%;
+}
+.contador h1{
+    margin-left: 2.2rem;
+}
+.btn-contador{
+    margin: 1rem;
 }
