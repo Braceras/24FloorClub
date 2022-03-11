@@ -9,12 +9,12 @@ import Footer from './Components/Footer'
 
 const App = () => {
 
-      let valor_de_a = 1
+    
 
 
   return ( <>
       <Header/>
-      <Main nombre='Contador:' a={valor_de_a}/>
+      <Main/>
       <Footer/>
 
   </>

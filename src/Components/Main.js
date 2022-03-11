@@ -1,35 +1,51 @@
-import React from 'react'
-import { useState } from 'react'
-import H1 from '../assets/img/H1.png'
+import React, { useState } from 'react'
+import Contador from './Contador'
+import TitleLogo from './TitleLogo'
+import { useEffect } from 'react'
 
-const Main = (props) => {
+let productosIiciales = [
+  {
+    id: 1,
+    nombre: 'Producto 1',
+    precio: 100 
+  },
+  {
+    id: 2,
+    nombre: 'Producto 2',
+    precio: 200 
+  },
+  {
+    id: 3,
+    nombre: 'Producto 3',
+    precio: 300 
+  },
+]
 
+const Main = () => {
 
-      const [estado, setEstado] = useState(0)
+  const [loading, setLoading] = useState(true)
+  const [productos, setProductos] = useState([])
 
-      function handleSumar(){
-        setEstado(estado + 1)
-      }
-      function handleResetear(){
-        setEstado(0)
-      }
-      function handleRestar(){
-        setEstado(estado - 1)
-      }
+  useEffect(() => {
+    console.log('Ejecutando useEffect')
+      
+    setTimeout(() => {
+      setProductos(productosIiciales) 
+    }, 5000)
+  },[]) 
+
+  console.log(productos)
 
   return (
     <div>
 
-      <div className='H1__Container'>
-          <img className='H1-img' src={H1} alt="24 Floor Club" />
-      </div>
-
-      <div className='contador'>
-        <h1 className='nameTittle'>{props.nombre} {estado}</h1>
-        <button className='btn-contador' onClick={handleSumar}> Sumar </button>
-        <button className='btn-contador' onClick={handleResetear}> Resetear </button>
-        <button className='btn-contador' onClick={handleRestar}> Restar </button>
-      </div>
+      <TitleLogo/>
+      <h2>Bienvenidos!</h2>
+      <button onClick={() => setLoading(!loading)} >toggle</button>
+      <ul>
+        <li>No hay productos....cargando</li>
+      </ul>
+      <Contador/>
 
     </div>
     
