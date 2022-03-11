@@ -43,7 +43,10 @@ const Main = () => {
       <h2>Bienvenidos!</h2>
       <button onClick={() => setLoading(!loading)} >toggle</button>
       <ul>
-        <li>No hay productos....cargando</li>
+        {productos.map((producto) => {
+            return <li key={producto.id}>{producto.nombre}</li>
+        })}
+        
       </ul>
       <Contador/>
 
