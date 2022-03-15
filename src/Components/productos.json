@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "nombre": "Nonchalantly 1",
+      "precio": 100,
+      "img": "../assets/img/Nonchalantly.png",
+      "despripcion": "Pieza de Arte única"
+    },
+    {
+      "id": 2,
+      "nombre": "Nonchalanty 2",
+      "precio": 200,
+      "img": "../assets/img/Nonchalantly.png",
+      "despripcion": "Pieza de Arte única"
+    },
+    {
+      "id": 3,
+      "nombre": "Nonchalantly 3",
+      "precio": 300,
+      "img": "../assets/img/Nonchalantly.png",
+      "despripcion": "Pieza de Arte única"
+    }
+]
+
