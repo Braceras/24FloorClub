@@ -1,11 +1,13 @@
 import React from 'react'
 
 
-const Item = ({productos}) => {
+const Item = ({}) => {
   return (
     <div>
-      <h1>{productos.nombre}</h1>
+      <h1>{}</h1>
+      
     </div>
+    
   )
 }
 
