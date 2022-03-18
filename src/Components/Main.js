@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
+import { Container } from 'react-bootstrap'
 import Contador from './Contador'
 import TitleLogo from './TitleLogo'
-import Item from './Item'
+import ItemListContainer from './ItemListContainer'
 
 
 const Main = () => {
@@ -9,15 +10,16 @@ const Main = () => {
   
 
   return (
-    <div>
+    <Container as="main" fluid>
 
       <TitleLogo/>
       <h2>Bienvenidos!</h2>
-      <Item/>
       
-      <Contador/>
+      <ItemListContainer/>
+      
+      <Contador stock={10} initial={1} />
 
-    </div>
+    </Container>
     
     
   )

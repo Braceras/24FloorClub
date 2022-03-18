@@ -1,10 +1,15 @@
 import React from 'react'
 
 
-const Item = ({}) => {
+const Item = ({ producto }) => {
+
+
   return (
     <div>
-      <h1>{}</h1>
+      <img src={producto.img} alt="Nonchalantly" />
+      <h2>{producto.nombre}</h2>
+      <p>{producto.detalle}</p>
+
       
     </div>
     

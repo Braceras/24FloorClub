@@ -1,23 +1,51 @@
 import React from 'react'
 import ItemList from './ItemList'
 import { useEffect, useState } from 'react'
-import productos from './productos.json'
+import Noncha from '../assets/img/Nonchalantly.png'
 
-console.log(productos);
+
+
+let productosIniciales = [
+    {
+      id: 1,
+      nombre: 'Nonchalantly',
+      precio: 100,
+      img: {Noncha},
+      detalle: "Pieza de Arte única"
+    },
+    {
+      id: 2,
+      nombre: "Nonchalanty 2",
+      precio: 200,
+      img: {Noncha},
+      detalle: "Pieza de Arte única"
+    },
+    {
+      id: 3,
+      nombre: "Nonchalantly 3",
+      precio: 300,
+      img: {Noncha},
+      detalle: "Pieza de Arte única"
+    }
+]
+
 
 const ItemListContainer = () => {
+
 
     const [loading, setLoading] = useState(true)
     const [productos, setProductos] = useState([])
 
     useEffect(() => {
         console.log('Ejecutando useEffect')
+        
           
             const pedido = new Promise((res, rej) => {
                 setTimeout(() => {
-                    setProductos(productosIiciales) 
+                    res(productosIniciales) 
                   }, 2000)
             })
+            
 
             pedido
             .then((resultado) => {
@@ -26,15 +54,17 @@ const ItemListContainer = () => {
             })
             .catch((error) => {
                 console.log('mal');
-                console.log(error);
+                console.error(error);
             })
+
       },[]) 
 
-   if(loading){
-        return <h1>Cargando...</h1>
-    }else{
-        return <ItemList productos={productos}/>
-    }
+      console.log(productosIniciales);
+      
+
+   return(
+       <ItemList productos={productos} />
+   )
 }
 
 export default ItemListContainer
