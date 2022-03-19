@@ -9,13 +9,13 @@ import Footer from './Components/Footer'
 
 const App = () => {
 
-    
 
 
-  return ( <>
-      <Header/>
-      <Main/>
-      <Footer/>
+
+  return (<>
+    <Header />
+    <Main />
+    <Footer />
 
   </>
   )
