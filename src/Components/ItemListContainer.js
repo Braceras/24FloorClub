@@ -8,25 +8,33 @@ import Noncha from '../assets/img/Nonchalantly.png'
 let productosIniciales = [
     {
       id: 1,
-      nombre: 'Nonchalantly',
+      nombre: "Nonchalantly",
       precio: 100,
-      img: {Noncha},
+      img: Noncha,
       detalle: "Pieza de Arte única"
     },
     {
       id: 2,
       nombre: "Nonchalanty 2",
       precio: 200,
-      img: {Noncha},
+      img: Noncha,
       detalle: "Pieza de Arte única"
     },
     {
       id: 3,
       nombre: "Nonchalantly 3",
       precio: 300,
-      img: {Noncha},
+      img: Noncha,
+      detalle: "Pieza de Arte única"
+    },
+    {
+      id: 4,
+      nombre: "Nonchalantly 4",
+      precio: 400,
+      img: Noncha,
       detalle: "Pieza de Arte única"
     }
+    
 ]
 
 
@@ -50,11 +58,12 @@ const ItemListContainer = () => {
             pedido
             .then((resultado) => {
                 console.log('Bien');
-                console.log(resultado);
+                //console.log(resultado);
+                setProductos(resultado)
             })
             .catch((error) => {
                 console.log('mal');
-                console.error(error);
+                //console.error(error);
             })
 
       },[]) 

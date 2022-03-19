@@ -14,13 +14,4 @@ const ItemList = ({ productos }) => {
     )
 }
 
-export default ItemList
-
-
-
-
-
-
-
-
-
+export default ItemList 

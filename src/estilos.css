@@ -54,6 +54,38 @@ nav a{
     color: #444;
 }
 
+.card-box{
+    margin: 0.7rem;
+    padding: 1rem;
+    width: 17.2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.1rem 0.2rem grey;
+    transition: all ease 1s;
+}
+.card-box:hover{
+    padding: 1.5rem;
+    width: 18rem;
+    height: 24rem;
+    
+}
+
+.card-box h3{
+    margin: 1rem;
+}
+.productos{
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
 .contador{
     margin: 3rem 0rem 0rem 15%;
 }
