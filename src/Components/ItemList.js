@@ -11,18 +11,6 @@ const ItemList = ({ productos }) => {
     )
 }
 
-<<<<<<< HEAD
+
 export default ItemList 
-=======
-export default ItemList
 
-
-
-
-
-
-
-
-
-
->>>>>>> 58589c0c0b18d226b1de365999e6b48837d437ec
