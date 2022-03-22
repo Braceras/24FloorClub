@@ -41,7 +41,7 @@ let productosIniciales = [
 const ItemListContainer = () => {
 
 
-    const [loading, setLoading] = useState(true)
+    
     const [productos, setProductos] = useState([])
 
     useEffect(() => {
@@ -73,6 +73,7 @@ const ItemListContainer = () => {
 
    return(
      <><ItemList productos={productos} />
+     
      </>
        
    )

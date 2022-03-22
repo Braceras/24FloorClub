@@ -1,8 +1,8 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
-import Contador from './Contador'
 import TitleLogo from './TitleLogo'
 import ItemListContainer from './ItemListContainer'
+import ItemDetailContainer from './ItemDetailContainer'
 
 
 
@@ -17,8 +17,8 @@ const Main = () => {
       <h2>Bienvenidos!</h2>
       
       <ItemListContainer/>
-      
-      <Contador stock={10} initial={1} />
+      <ItemDetailContainer/>
+    
 
     </Container>
     
