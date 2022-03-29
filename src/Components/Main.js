@@ -2,7 +2,9 @@ import React from 'react'
 import { Container } from 'react-bootstrap'
 import TitleLogo from './TitleLogo'
 import ItemListContainer from './ItemListContainer'
-import ItemDetailContainer from './ItemDetailContainer'
+import { Route, Routes } from 'react-router-dom'
+import Carrito from './Carrito'
+
 
 
 
@@ -14,10 +16,19 @@ const Main = () => {
     <Container as="main" fluid>
 
       <TitleLogo/>
+
+
       <h2>Bienvenidos!</h2>
       
-      <ItemListContainer/>
-      <ItemDetailContainer/>
+
+    <Routes>
+      <Route path='/' element={<ItemListContainer/>} />
+      <Route path='/Nosotros/:idNosotros' element={<ItemListContainer/>} />
+      <Route path='/Desarrolladores/:idDesarrolladores' element={<ItemListContainer/>} />
+      <Route path='Contacto/:idContacto' element={<ItemListContainer/>} />
+      <Route path='/carrito' element={<Carrito/>} />
+    </Routes>
+      
     
 
     </Container>

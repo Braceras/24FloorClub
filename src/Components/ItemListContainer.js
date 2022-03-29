@@ -2,6 +2,7 @@ import React from 'react'
 import ItemList from './ItemList'
 import { useEffect, useState } from 'react'
 import Noncha from '../assets/img/Nonchalantly.png'
+import { useParams } from 'react-router-dom'
 
 
 
@@ -41,11 +42,22 @@ let productosIniciales = [
 const ItemListContainer = () => {
 
 
-    
+    const [loading, setLoading] = useState(true)
     const [productos, setProductos] = useState([])
 
+
+
+    const resultado = useParams()
+      console.log(resultado);
+
+
+      
+
     useEffect(() => {
-        console.log('Ejecutando useEffect')
+        
+          
+      
+        
         
           
             const pedido = new Promise((res, rej) => {
@@ -57,26 +69,27 @@ const ItemListContainer = () => {
 
             pedido
             .then((resultado) => {
-                console.log('Bien');
                 //console.log(resultado);
                 setProductos(resultado)
             })
             .catch((error) => {
-                console.log('mal');
                 //console.error(error);
+                alert(error)
+            })
+            .finally(() => {
+              setLoading(false)
             })
 
       },[]) 
 
-      console.log(productosIniciales);
+      
       
 
-   return(
-     <><ItemList productos={productos} />
-     
-     </>
-       
-   )
+   if(loading){
+     return <h3>Cargando...</h3>
+   } else {
+     return <><ItemList productos={productos} /></>
+   }
 }
 
 export default ItemListContainer
