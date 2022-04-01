@@ -51,7 +51,7 @@ const ItemListContainer = () => {
       console.log(resultado);
 
 
-      
+
 
     useEffect(() => {
         
@@ -88,7 +88,10 @@ const ItemListContainer = () => {
    if(loading){
      return <h3>Cargando...</h3>
    } else {
-     return <><ItemList productos={productos} /></>
+     return <>
+     <ItemList productos={productos} />
+     
+     </>
    }
 }
 

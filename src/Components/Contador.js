@@ -1,26 +1,32 @@
 import React from 'react'
 import { useState } from 'react'
 
-const Contador = () => {
+const Contador = ({stock, initial, onAdd}) => {
 
     const [estado, setEstado] = useState(0)
 
-      function handleSumar(){
-        setEstado(estado + 1)
+      const handleSumar = () => {
+        if(estado < stock){
+          setEstado(estado + 1)
+        }
       }
-      function handleResetear(){
-        setEstado(0)
+      
+      const handleAgregar = () => {
+        onAdd(estado)
       }
-      function handleRestar(){
-        setEstado(estado - 1)
+
+      const handleRestar = () => {
+        if(estado > initial){
+          setEstado(estado - 1)
+        }
       }
 
 
   return (
     <div className='contador'>
-        <h1 className='nameTittle'>Contador: {estado}</h1>
+        <p className='nameTittle'>Cantidad: {estado}</p>
         <button className='btn-contador' onClick={handleSumar}> Sumar </button>
-        <button className='btn-contador' onClick={handleResetear}> Resetear </button>
+        <button className='btn-contador' onClick={handleAgregar}> Añadir al carrito </button>
         <button className='btn-contador' onClick={handleRestar}> Restar </button>
       </div>
   )

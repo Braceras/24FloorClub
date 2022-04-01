@@ -2,6 +2,7 @@ import React from 'react'
 import { Container } from 'react-bootstrap'
 import TitleLogo from './TitleLogo'
 import ItemListContainer from './ItemListContainer'
+import ItemDetailContainer from './ItemDetailContainer'
 import { Route, Routes } from 'react-router-dom'
 import Carrito from './Carrito'
 
@@ -25,6 +26,7 @@ const Main = () => {
       <Route path='/' element={<ItemListContainer/>} />
       <Route path='/Nosotros/:idNosotros' element={<ItemListContainer/>} />
       <Route path='/Desarrolladores/:idDesarrolladores' element={<ItemListContainer/>} />
+      <Route path='/Producto/:idProducto' element={<ItemDetailContainer/>} />
       <Route path='Contacto/:idContacto' element={<ItemListContainer/>} />
       <Route path='/carrito' element={<Carrito/>} />
     </Routes>
