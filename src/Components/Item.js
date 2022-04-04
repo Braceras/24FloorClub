@@ -10,7 +10,7 @@ const Item = ({ producto }) => {
   }
 
   return (
-    <Link to='/Producto/1'>
+    <Link to={`/Producto/${producto.id}`}>
     <div className='card-box' >
       <img src={producto.img} alt="Nonchalantly" style={{width:"15rem"}} />
       <h3>{producto.nombre}</h3>
