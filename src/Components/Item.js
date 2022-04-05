@@ -10,7 +10,11 @@ const Item = ({ producto }) => {
   }
 
   return (
+<<<<<<< HEAD
     <Link to='/Producto'>
+=======
+    <Link to={`/Producto/${producto.id}`}>
+>>>>>>> 82e584f49f5a1838c9106588e76ae99aab84f740
     <div className='card-box' >
       <img src={producto.img} alt="Nonchalantly" style={{width:"15rem"}} />
       <h3>{producto.nombre}</h3>

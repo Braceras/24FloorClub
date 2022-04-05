@@ -1,22 +1,33 @@
-import React from 'react'
-import Contador from './Contador'
+import React from "react";
+import Contador from "./Contador";
 
-const ItemDetail = ({ item }) => {
-
-console.log(item);
-
+function ItemDetail(props) {
+  const { item } = props;
   return (
-    <div>
-        <div className='boxCardDetail'>
-            <img src={item.img} alt="nonchalantly" className='imgDetail' />
-            <h2>{item.nombre}</h2>
-            <p className="descripcion">{item.detalle}</p>
-            <p>Precio: $ {item.precio}</p>
-        </div>
-
-        <Contador stock={10} initial={1} />
+    <div className="container">
+      <div className="row">
+        <section className="p-0 col-6">
+          <img
+            src={item?.img}
+            alt="nonchalantly"
+            className="img-fluid imgDetail"
+          />
+        </section>
+        <section className="col-6 bg-2 p-3">
+          <h3>{item?.nombre}</h3>
+          <div className="boxCardDetail"></div>
+          <p className="descripcion">{item?.detalle}</p>
+          <p>Precio: $ {item?.precio}</p>
+          <Contador stock={10} initial={1} />
+        </section>
+      </div>
+      <style jsx>{`
+        .bg-2 {
+          background-color: #f2f2f2;
+        }
+      `}</style>
     </div>
-  )
+  );
 }
 
-export default ItemDetail
+export default ItemDetail;
