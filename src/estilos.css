@@ -64,9 +64,7 @@ nav a{
     transition: all ease 1s;
 }
 .card-box:hover{
-    padding: 1.5rem;
-    width: 18rem;
-    height: 24rem;
+    transform: scale(1.1);
     
 }
 
