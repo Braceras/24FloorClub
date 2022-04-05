@@ -1,15 +1,12 @@
 import React from "react";
 import Noncha from "../assets/img/Nonchalantly.png";
+import BoredApe from '../assets/img/boredape1.jpg'
+import CriptoPunk from '../assets/img/Punk4.jpg'
+import TheWeek from '../assets/img/nftTheWeek.jpg'
 import { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 
-let productoInicial = {
-  img: Noncha,
-  nombre: "Nonchalantly",
-  detalle: "Pieza de Arte única",
-  precio: 100,
-};
 
 let productosIniciales = [
     {
@@ -21,24 +18,24 @@ let productosIniciales = [
     },
     {
       id: 2,
-      nombre: "Nonchalanty 2",
+      nombre: "Bored Ape",
       precio: 200,
-      img: Noncha,
-      detalle: "Pieza de Arte única",
+      img: BoredApe,
+      detalle: "Pieza de Arte única Bored Ape",
     },
     {
       id: 3,
-      nombre: "Nonchalantly 3",
+      nombre: "Cripto Punk",
       precio: 300,
-      img: Noncha,
-      detalle: "Pieza de Arte única",
+      img: CriptoPunk,
+      detalle: "Pieza de Arte única Cripto Punk",
     },
     {
       id: 4,
-      nombre: "Nonchalantly 4",
+      nombre: "NFT The Weeknd",
       precio: 400,
-      img: Noncha,
-      detalle: "Pieza de Arte única",
+      img: TheWeek,
+      detalle: "Pieza de Arte única The Weeknd",
     },
   ];
 

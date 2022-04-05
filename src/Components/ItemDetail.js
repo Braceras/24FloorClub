@@ -18,7 +18,7 @@ function ItemDetail(props) {
           <div className="boxCardDetail"></div>
           <p className="descripcion">{item?.detalle}</p>
           <p>Precio: $ {item?.precio}</p>
-          <Contador stock={10} initial={1} />
+          <Contador stock={3} initial={1} />
         </section>
       </div>
       <style jsx>{`

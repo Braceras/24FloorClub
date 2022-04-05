@@ -12,21 +12,6 @@ const Main = () => {
       <TitleLogo />
 
       <h2>Bienvenidos!</h2>
-<<<<<<< HEAD
-      
-
-    <Routes>
-      <Route path='/' element={<ItemListContainer/>} />
-      <Route path='/Nosotros/:idNosotros' element={<ItemListContainer/>} />
-      <Route path='/Desarrolladores/:idDesarrolladores' element={<ItemListContainer/>} />
-      <Route path='/Producto' element={<ItemListContainer/>} />
-      <Route path='Contacto/:idContacto' element={<ItemListContainer/>} />
-      <Route path='/carrito' element={<Carrito/>} />
-    </Routes>
-      
-    
-=======
->>>>>>> 82e584f49f5a1838c9106588e76ae99aab84f740
 
       <Routes>
         <Route path="/" element={<ItemListContainer />} />
