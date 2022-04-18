@@ -7,9 +7,11 @@ import { contexto } from './miContexto'
 const Carrito = () => {
 
   const {carrito, total, cantidad, removeItem} = useContext(contexto)
+  console.log(carrito)
   
-  const HandleClick = () => {
-      removeItem()
+  const HandleClick = (e, idx) => {
+    e.preventDefault()
+      removeItem(idx)
   }
 
   const terminarCompra = () => {
@@ -29,13 +31,13 @@ const Carrito = () => {
 
   return (
     <div>
-      {carrito.map(producto => (
+      {carrito.map((producto, idx) => (
         <div key={producto.id} className="col-3 bg-2 p-3 detailProd" >
         <img src={producto.img} alt='ImgProduct' style={{width:"15rem"}} />
         <p>{producto.nombre}</p>
         <p><img src={producto.eth} alt='ethPNG' className='ETH' /> <b>{producto.precio}</b></p> <hr/>
         <p>Total: <img src={producto.eth} alt='ethPNG' className='ETH' /> <b>{cantidad * producto.precio}</b> </p>
-        <button onClick={HandleClick} className='btn-cart'>Borrar</button>
+        <button onClick={(e)=> HandleClick(e,idx)} className='btn-cart'>Borrar</button>
         <button onClick={terminarCompra} className='btn-cart'>Terminar Compra</button> 
       </div>
       ))}
