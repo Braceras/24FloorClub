@@ -1,5 +1,4 @@
 import React from 'react'
-import Contador from './Contador'
 import { Link } from 'react-router-dom'
 
 
@@ -11,12 +10,12 @@ const Item = ({ producto }) => {
 
   return (
 
-    <Link to={`/Producto/${producto.id}`}>
+    <Link to={`/Producto/${producto.id}`} className='card-link' >
     <div className='card-box' >
-      <img src={producto.img} alt="Nonchalantly" style={{width:"15rem"}} />
-      <h3>{producto.nombre}</h3>
+      <img src={producto.img} alt="ImgProduct" style={{width:"15rem"}} />
+      <h3 className='h3-nameTittle'>{producto.nombre}</h3>
       <p>{producto.detalle}</p>
-      <p>Precio: $ {producto.precio}</p>
+      <p><img src={producto.eth} alt='ethPNG' className='ETH' /> <b>{producto.precio}</b></p>
       
     </div>
     </Link>

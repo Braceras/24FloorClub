@@ -5,6 +5,8 @@ import ItemListContainer from "./ItemListContainer";
 import ItemDetailContainer from "./ItemDetailContainer";
 import { Route, Routes } from "react-router-dom";
 import Carrito from "./Carrito";
+import TestContainer from './TestContainer';
+
 
 const Main = () => {
   return (
@@ -15,17 +17,19 @@ const Main = () => {
 
       <Routes>
         <Route path="/" element={<ItemListContainer />} />
-        <Route path="/nosotros" element={<ItemListContainer />} />
-        <Route
-          path="/desarrolladores"
-          element={<ItemListContainer />}
-        />
+        
+        <Route path="/Doodles/:idCategoria" element={<ItemListContainer />}/>
+        <Route path="/MutantCats/:idCategoria" element={<ItemListContainer />} /> 
+        <Route path="/BoredApes/:idCategoria" element={<ItemListContainer />} />
+        <Route path="/CryptoPunks/:idCategoria" element={<ItemListContainer />} />
+        
         <Route path="producto" element={<ItemDetailContainer />}>
           <Route path=":productoID" element={<ItemDetailContainer />} />
         </Route>
         <Route path="/producto" element={<ItemDetailContainer />} />
-        <Route path="/contacto" element={<ItemListContainer />} />
+      
         <Route path="/carrito" element={<Carrito />} />
+        <Route path="/test" element={<TestContainer />} />
       </Routes>
     </Container>
   );

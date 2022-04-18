@@ -27,7 +27,6 @@ body{
 
 .material-icons{
     margin-left: 40%;
-    border: solid grey;
 }
 
 .H1__Container{
@@ -55,6 +54,21 @@ nav a{
     color: #444;
 }
 
+.card-link{
+    text-decoration: none;
+    color: #000;
+}
+
+.ETH{
+    width: 11px;
+    height: 20px;
+}
+
+.container{
+
+    box-shadow: 0 0.1rem 0.2rem grey;
+}
+
 .card-box{
     margin: 0.7rem;
     padding: 1rem;
@@ -62,15 +76,16 @@ nav a{
     border-radius: 1rem;
     box-shadow: 0 0.1rem 0.2rem grey;
     transition: all ease 1s;
-    text-decoration: none;
+    
 }
 .card-box:hover{
     transform: scale(1.1);
     
 }
 
-.card-box h3{
-    margin: 1rem;
+.h3-nameTittle{
+    margin-top: 0.7rem;
+    color: #999;
     
 }
 .productos{
@@ -78,13 +93,31 @@ nav a{
 }
 
 
+.detailProd{
+    background-color: #f2f2f2;
+}
 
 
 
+.btn-contador{
+    display: inline-block;
+    width: 5%;
+    border-style: none;
+    border-radius: 0.3rem;
+    box-shadow: 0 0rem 0.2rem grey;
+}
 
+.btn-cart{
+    margin: 1rem 0rem 0rem 0.25rem;
+    border-style: none;
+    border-radius: 0.3rem;
+    box-shadow: 0 0rem 0.2rem grey;
+    padding: 0.4rem;
+}
 
-
-
+.numCont {
+    display: inline-block;
+}
 
 
 .contador{

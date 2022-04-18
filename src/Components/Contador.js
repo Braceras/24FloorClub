@@ -12,7 +12,7 @@ const Contador = ({stock, initial, onAdd}) => {
       }
       
       const handleAgregar = () => {
-        onAdd(estado)
+        onAdd(estado) 
       }
 
       const handleRestar = () => {
@@ -24,10 +24,10 @@ const Contador = ({stock, initial, onAdd}) => {
 
   return (
     <div className='contador'>
-        <p className='nameTittle'>Cantidad: {estado}</p>
-        <button className='btn-contador' onClick={handleSumar}> Sumar </button>
-        <button className='btn-contador' onClick={handleAgregar}> Añadir al carrito </button>
-        <button className='btn-contador' onClick={handleRestar}> Restar </button>
+        <button className='btn-contador' onClick={handleSumar}> + </button>
+        <p className='numCont'>{estado}</p>
+        <button className='btn-contador' onClick={handleRestar}> - </button> <br />
+        <button className='btn-cart' onClick={handleAgregar}> Añadir al carrito </button>
       </div>
   )
 }
