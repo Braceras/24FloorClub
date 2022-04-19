@@ -18,14 +18,17 @@ const MiProvider = ({ children }) => {
         setCarrito(copia)
         setCantidad(cantidad+nuevaCantidad)
         setTotal(total + producto.precio * nuevaCantidad)
-
-        
     }
 
 
     
-
-    const removeItem = (producto, nuevaCantidad) => {
+    const removeItem = (idx)=>{
+        const nuevoCarrito = carrito.filter((p, i) => i !== idx)
+        setCarrito(nuevoCarrito)
+        setCantidad(cantidad >= 0 ? cantidad-1 : 0)
+        console.log("Item Borrado");
+    }
+    const removeAllItems = (producto, nuevaCantidad) => {
         const copia = carrito.slice(0)
         copia.splice({...producto, nuevaCantidad})
         setCarrito(copia)
@@ -40,8 +43,6 @@ const MiProvider = ({ children }) => {
         total,
         addItem,
         removeItem
-        
-        
     }
     return(
         <Provider value={valorDelContexto}>
